@@ -41,7 +41,6 @@ h1:before{
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
   font-size: 21vw;
-  color: #FF0108;
   -webkit-text-fill-color: #0e1111;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #FF0108;
