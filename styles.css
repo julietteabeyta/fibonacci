@@ -16,8 +16,7 @@ body{
   display: flex;
   flex-direction: column;
   font-family: 'Roboto Mono', monospace;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  overflow: hidden;
 }
 
 .header{
@@ -108,7 +107,7 @@ button{
 
 #values{
   margin-top: 50px;
-  overflow: hidden;
+  overflow-y: scroll;
   word-wrap:break-word;
   padding: 25px;
 }
