@@ -39,11 +39,13 @@
     if(n > 100 || n < 1){
       submit.classList.add('error');
       return;
-    } else if(n == 1){
-      values.innerHTML = 1;
-      return [1];
     } else{
       submit.classList.remove('error');
+    }
+    if (n == 1) {
+      submit.classList.remove('error');
+      values.innerHTML = 1;
+      return [1];
     }
     let fibArray = [1,1];
     let i;
