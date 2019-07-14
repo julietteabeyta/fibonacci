@@ -1,0 +1,128 @@
+body{
+  height: 100vh;
+  width: 100vw;
+  text-transform: uppercase;
+  background: #0e1111;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Operator Mono Lig', sans-serif;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.header{
+  margin: 100px 0 100px;;
+}
+
+h1{
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  margin-top: 50px;
+  font-family: 'Zoika font', sans-serif;
+  font-size: 7vw;
+}
+
+h1:before{
+  content: 'Fibonacci';
+  display: inline-block;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  font-size: 21vw;
+  color: #FF0108;
+  -webkit-text-fill-color: #0e1111;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #FF0108;
+}
+
+.form{
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 8px;
+  justify-items: center;
+  align-self: center;
+}
+
+.field{
+  font-size: 24px;
+  font-weight: 700;
+  padding: 15px;
+  transition: border .2s ease;
+  border: 1px solid;
+  color: white;
+  border-color: #FF0108;
+  border-radius: 8px;
+  background: #0e1111;
+}
+
+.error:after{
+  content: 'please enter a number between 1 & 100';
+  font-size: 12px;
+  color: white;
+  font-weight: 700;
+  position: absolute;
+  bottom: -24px;
+  left: 0;
+  text-transform: lowercase;
+}
+
+.label{
+  align-self: end;
+  justify-self: start;
+}
+
+input, button {
+  border:none;
+  text-transform: uppercase;
+  font-family: 'Operator Mono Lig', sans-serif;
+}
+
+button{
+  font-size: 16px;
+  font-weight: 700;
+  padding: 16px 32px;
+  cursor: pointer;
+  width: 100%;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  border: 1px solid white;
+  border-radius: 8px;
+  background: white;
+}
+
+#values{
+  margin-top: 50px;
+  overflow: hidden;
+  word-wrap:break-word;
+  padding: 25px;
+}
+
+@media screen and (min-width: 740px){
+  .header{
+    margin-top: 200px;
+  }
+  .form {
+      grid-template-areas: 'label .' 'field button';
+      grid-template-columns: 1fr auto;
+  }
+  .field{
+    grid-area: field;
+  }
+  .button{
+    grid-area: button;
+  }
+  h1{
+    font-size: 4vw;
+  }
+  h1:after{
+    font-size: 12vw;
+  }
+}
