@@ -104,6 +104,10 @@ button{
   background: white;
 }
 
+input:focus, button:focus {
+  outline:0;
+}
+
 #values{
   margin-top: 50px;
   overflow-y: scroll;
